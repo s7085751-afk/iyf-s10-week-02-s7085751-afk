@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; }
+
+/* Navigation */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; }
+.logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: bold; }
+.logo span { color: #e91e63; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 600; }
+
+/* Hero Section */
+.hero { 
+    height: 80vh; 
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('your-image.jpg') center/cover;
+    background-color: #fce4ec; /* Fallback pink */
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 10px; }
+.cta-btn { background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; display: inline-block; }
+
+/* Products */
+.products { padding: 50px 10%; text-align: center; }
+.products h2 { margin-bottom: 40px; font-family: 'Playfair Display', serif; font-size: 32px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.img-placeholder { font-size: 80px; background: #f9f9f9; padding: 40px; border-radius: 10px; margin-bottom: 15px; }
+.buy-btn { display: block; margin-top: 15px; color: #e91e63; text-decoration: none; border: 1px solid #e91e63; padding: 10px; border-radius: 5px; }
+.buy-btn:hover { background: #e91e63; color: white; }
+
+/* Footer */
+footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
