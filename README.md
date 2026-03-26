@@ -1,45 +1,52 @@
-# Week 4: JavaScript Fundamentals 🚀
+# IYF Week 2 - CSS Mastery
 
-This repository contains my submission for the IYF Weekend Academy Season 10, Week 4 tasks. The focus of this week was mastering JavaScript basics, data manipulation, and building logic-driven programs.
+**Repository:** iyf-s10-week-02-s7085751-afk
+**Student:** Salma Sharleen
+**Week:** 2 - CSS Mastery
 
-## 📋 Project Overview
-This project demonstrates proficiency in:
-- **JS Basics:** Variables (`let`, `const`), Data Types, and Operators.
-- **Control Flow:** If/Else statements, Switch cases, and Loops (For, While, For...of).
-- **Functions:** Declarations, Expressions, and Arrow functions.
-- **Data Structures:** Working with Arrays and Objects.
-- **Functional Programming:** Using `.map()`, `.filter()`, and `.reduce()`.
+## 🎯 Project Overview
 
----
+A fully responsive portfolio website built with modern CSS techniques including Flexbox, CSS Grid, and mobile-first responsive design.
 
-## 🛠️ Tasks Completed
+## ✅ Completed Tasks
 
-### Lesson 7: JavaScript Basics
-- [x] Variable declarations and type checking.
-- [x] Arithmetic and Logical operations.
-- [x] Function implementation (Area calculation, String reversal, etc.).
-- [x] **Mini-Project:** A functional console-based Calculator supporting `+`, `-`, `*`, `/`, `%`, and `**`.
+### Core Tasks
+- [x] Task 3.1: CSS Setup & Basic Styling
+- [x] Task 3.2: Box Model Mastery
+- [x] Task 3.3: Typography System
+- [x] Task 3.4: Color Scheme
+- [x] Task 4.1: Flexbox Layout
+- [x] Task 4.2: CSS Grid Layout
+- [x] Task 4.3: Mobile-First Responsive Design
+- [x] Task 4.4: Polish & Refinement
 
-### Lesson 8: Arrays & Objects
-- [x] Array manipulation using modern ES6 methods.
-- [x] Object creation and method implementation.
-- [x] **Mini-Project:** Student Grade Tracker.
-  - Features: Adding students, calculating individual/subject averages, and identifying top performers.
+### Daily Challenges
+- [x] Day 1: Button Styles
+- [x] Day 2: Card Component
+- [x] Day 3: Hero Section
+- [x] Day 4: Form Styling
+- [x] Day 5: Footer Design
 
-### 📅 Daily Challenges
-- **Day 1:** FizzBuzz Logic.
-- **Day 2:** String Reversal.
-- **Day 3:** Finding the Largest Number in an array.
-- **Day 4:** Removing Duplicates from a list.
-- **Day 5:** Palindrome Checker.
+## 🚀 Features
 
----
+- **Fully Responsive** - Optimized for mobile, tablet, and desktop
+- **Modern Layouts** - CSS Grid and Flexbox throughout
+- **Custom Design System** - Color scheme and typography
+- **Interactive Elements** - Hover effects and smooth transitions
+- **Accessibility** - Focus states and semantic HTML
+- **Mobile-First** - Progressive enhancement approach
 
-## 🚀 How to Run
-1. Clone this repository.
-2. Open `index.html` in any modern web browser.
-3. Open the **Developer Tools (F12)** and navigate to the **Console** tab to see the results and interactive data.
+## 🛠️ Technologies Used
 
----
-**Author:** [s7085751-afk]
-**Academy:** IYF Weekend Academy - Season 10
+- HTML5
+- CSS3 (Grid, Flexbox, Custom Properties)
+- Responsive Design
+- Mobile-First Approach
+
+## 📁 Project Structure
+iyf-s10-week-02/
+├── index.html
+├── about.html
+├── projects.html
+├── contact.html
+└── README.md

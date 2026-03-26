@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-primary: #6366f1;
+            --color-secondary: #8b5cf6;
+            --color-accent: #ec4899;
+            --color-text: #1e293b;
+            --color-white: #ffffff;
+            --color-border: #e2e8f0;
+            --font-base: 1rem;
+            --font-lg: 1.125rem;
+            --font-xl: 1.25rem;
+            --font-2xl: 1.5rem;
+            --font-3xl: 1.875rem;
+            --font-sm: 0.875rem;
+        }
+
+        /* Projects page specific styles - Matching home page header */
+        .main-header {
+            background-color: var(--color-primary);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-header h1 {
+            margin: 0;
+            font-size: var(--font-3xl);
+            color: #000000; /* Black color matching home page */
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+        }
+
+        .main-nav a {
+            color: #000000; /* Black color matching home page */
+            font-weight: 600;
+            font-size: var(--font-base);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .projects-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .projects-hero h2 {
+            font-size: var(--font-4xl);
+            margin: 0 0 1rem 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .projects-hero p {
+            font-size: var(--font-xl);
+            margin: 0;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .projects-section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: var(--font-3xl);
+            color: var(--color-text);
+        }
+
+        /* Colorful Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            border: 1px solid var(--color-border);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+        }
+
+        /* Unique colors for each project */
+        .project-card:nth-child(1) .project-image {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+
+        .project-card:nth-child(1) .tag {
+            background-color: #e0e7ff;
+            color: #6366f1;
+        }
+
+        .project-card:nth-child(1) .view-project-btn {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+
+        .project-card:nth-child(2) .project-image {
+            background: linear-gradient(135deg, #10b981, #34d399);
+        }
+
+        .project-card:nth-child(2) .tag {
+            background-color: #d1fae5;
+            color: #059669;
+        }
+
+        .project-card:nth-child(2) .view-project-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .project-card:nth-child(3) .project-image {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        }
+
+        .project-card:nth-child(3) .tag {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+
+        .project-card:nth-child(3) .view-project-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .project-card:nth-child(4) .project-image {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+
+        .project-card:nth-child(4) .tag {
+            background-color: #fce7f3;
+            color: #db2777;
+        }
+
+        .project-card:nth-child(4) .view-project-btn {
+            background: linear-gradient(135deg, #ec4899, #db2777);
+        }
+
+        .project-card:nth-child(5) .project-image {
+            background: linear-gradient(135deg, #06b6d4, #22d3ee);
+        }
+
+        .project-card:nth-child(5) .tag {
+            background-color: #cffafe;
+            color: #0891b2;
+        }
+
+        .project-card:nth-child(5) .view-project-btn {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+        }
+
+        .project-card:nth-child(6) .project-image {
+            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+        }
+
+        .project-card:nth-child(6) .tag {
+            background-color: #ede9fe;
+            color: #7c3aed;
+        }
+
+        .project-card:nth-child(6) .view-project-btn {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .project-image {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-image::after {
+            content: attr(data-project);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 1rem;
+            color: white;
+            font-size: var(--font-lg);
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: var(--font-xl);
+            color: var(--color-text);
+        }
+
+        .project-content p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+
+        .tag {
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: var(--font-sm);
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .tag:hover {
+            transform: scale(1.05);
+        }
+
+        .view-project-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .view-project-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
+            filter: brightness(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 3rem 1rem 1.5rem 1rem;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-column h4 {
+            font-size: var(--font-2xl);
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .footer-column ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .main-nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .projects-hero {
+                padding: 3rem 1rem;
+            }
+
+            .projects-hero h2 {
+                font-size: 2rem;
+            }
+
+            .projects-section {
+                padding: 2rem 1rem;
+            }
+
+            .project-image {
+                height: 180px;
+                font-size: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Header - Matching Home Page Style -->
+    <header class="main-header">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <h2>My Projects</h2>
+        <p>Showcasing my latest work and creative solutions</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+
+        <div class="projects-grid">
+            <!-- Project 1 - Purple -->
+            <div class="project-card">
+                <div class="project-image" data-project="E-Commerce Platform">🛒</div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured online shopping experience with cart functionality and secure payment integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 2 - Green -->
+            <div class="project-card">
+                <div class="project-image" data-project="Task Manager">✅</div>
+                <div class="project-content">
+                    <h3>Task Manager App</h3>
+                    <p>A productivity application for managing daily tasks with drag-and-drop functionality and reminders.</p>
+                    <div class="project-tags">
+                        <span class="tag">UI Design</span>
+                        <span class="tag">CSS Grid</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 3 - Amber -->
+            <div class="project-card">
+                <div class="project-image" data-project="Weather Dashboard">🌤️</div>
+                <div class="project-content">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather information with beautiful visualizations and location-based forecasts.</p>
+                    <div class="project-tags">
+                        <span class="tag">API</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 4 - Pink -->
+            <div class="project-card">
+                <div class="project-image" data-project="Blog Platform">📝</div>
+                <div class="project-content">
+                    <h3>Blog Platform</h3>
+                    <p>A content management system for writers with markdown support and SEO optimization tools.</p>
+                    <div class="project-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">UX</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 5 - Cyan -->
+            <div class="project-card">
+                <div class="project-image" data-project="Portfolio Generator">🎨</div>
+                <div class="project-content">
+                    <h3>Portfolio Generator</h3>
+                    <p>A tool that helps developers create beautiful portfolios in minutes with customizable templates.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tool</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 6 - Violet -->
+            <div class="project-card">
+                <div class="project-image" data-project="Social Dashboard">📊</div>
+                <div class="project-content">
+                    <h3>Social Media Dashboard</h3>
+                    <p>Analytics dashboard for tracking social media performance across multiple platforms.</p>
+                    <div class="project-tags">
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Charts</span>
+                    </div>
+                    <a href="#" class="view-project-btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About</h4>
+                <p>Building amazing web experiences with passion and precision.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 s7085751@gmail.com</li>
+                    <li>📱 0791734691</li>
+                    <li>📍 Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

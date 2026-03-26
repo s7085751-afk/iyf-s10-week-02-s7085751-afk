@@ -1,0 +1,684 @@
+/* ============================================
+   TASK 3.1: CSS SETUP & BASIC STYLING
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #222;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin-top: 0;
+}
+h2 { font-size: 2rem; margin-top: 1.5rem; }
+h3 { font-size: 1.75rem; margin-top: 1.25rem; }
+h4 { font-size: 1.5rem; margin-top: 1rem; }
+h5 { font-size: 1.25rem; margin-top: 1rem; }
+h6 { font-size: 1rem; margin-top: 1rem; }
+
+/* Paragraphs and basic elements */
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ============================================
+   TASK 3.3: TYPOGRAPHY SYSTEM
+   ============================================ */
+
+/* CSS Variables for Typography Scale */
+:root {
+    --font-xs: 0.75rem;    /* 12px */
+    --font-sm: 0.875rem;   /* 14px */
+    --font-base: 1rem;     /* 16px */
+    --font-lg: 1.125rem;   /* 18px */
+    --font-xl: 1.25rem;    /* 20px */
+    --font-2xl: 1.5rem;    /* 24px */
+    --font-3xl: 1.875rem;  /* 30px */
+    --font-4xl: 2.25rem;   /* 36px */
+    
+    /* Font Families */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Apply Typography Scale */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: var(--font-4xl);
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-3xl);
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: var(--font-xl);
+}
+
+h5 {
+    font-family: var(--font-heading);
+    font-size: var(--font-lg);
+}
+
+h6 {
+    font-family: var(--font-heading);
+    font-size: var(--font-base);
+}
+
+.small-text {
+    font-size: var(--font-sm);
+}
+
+.extra-small {
+    font-size: var(--font-xs);
+}
+/* ============================================
+   TASK 3.4: COLOR SCHEME
+   ============================================ */
+
+/* Color Variables - Using a professional blue-gray palette */
+:root {
+    /* Main Colors */
+    --color-primary: #2563eb;
+    --color-secondary: #64748b;
+    --color-background: #f8fafc;
+    --color-text: #1e293b;
+    --color-muted: #94a3b8;
+    
+    /* Variations */
+    --color-primary-light: #3b82f6;
+    --color-primary-dark: #1d4ed8;
+    --color-secondary-light: #94a3b8;
+    --color-secondary-dark: #475569;
+    
+    /* Additional UI Colors */
+    --color-white: #ffffff;
+    --color-border: #e2e8f0;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+}
+
+/* Apply Colors */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* Card Backgrounds */
+.card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+}
+
+/* Muted text */
+.text-muted {
+    color: var(--color-muted);
+}
+/* ============================================
+   TASK 4.1: FLEXBOX LAYOUT
+   ============================================ */
+
+/* Exercise 1: Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Exercise 2: Card Row */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.flex-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-card h3 {
+    margin-top: 0;
+}
+
+.flex-card p {
+    flex-grow: 1;
+}
+
+/* Exercise 3: Footer Layout */
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-white);
+    padding: 3rem 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: var(--color-muted);
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: var(--color-white);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-secondary);
+    color: var(--color-muted);
+}
+/* ============================================
+   TASK 4.2: CSS GRID LAYOUT
+   ============================================ */
+
+/* Exercise 1: Photo Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: var(--font-lg);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Exercise 2: Magazine Layout */
+.magazine-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+.magazine-header {
+    grid-area: header;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.magazine-sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.magazine-main {
+    grid-area: main;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.magazine-footer {
+    grid-area: footer;
+    background-color: var(--color-text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Exercise 3: Project Cards Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-border);
+}
+
+.project-card-image {
+    height: 200px;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.project-card-content {
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: var(--color-primary-light);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: var(--font-sm);
+}
+/* ============================================
+   TASK 4.3: MOBILE-FIRST RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile First - Base Styles (default for mobile) */
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+/* Navigation Mobile */
+.nav-links {
+    display: none; /* Hidden on mobile by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--color-white);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section Mobile */
+.hero {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+/* Contact Form Mobile */
+.contact-form {
+    width: 100%;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Show nav links, hide hamburger */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    /* Hero with side image */
+    .hero {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+        padding: 4rem 2rem;
+    }
+    
+    .hero-content {
+        flex: 1;
+    }
+    
+    .hero-image {
+        flex: 1;
+        display: block;
+    }
+    
+    /* Contact page with sidebar */
+    .contact-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero {
+        padding: 6rem 2rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Mobile Menu Toggle Script Support */
+@media (max-width: 767px) {
+    .navbar {
+        position: relative;
+    }
+}
+/* ============================================
+   TASK 4.4: POLISH & REFINEMENT
+   ============================================ */
+
+/* 1. Hover States */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
+
+.flex-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* 2. Transitions */
+.btn, 
+a, 
+.project-card, 
+.flex-card, 
+.gallery-item,
+.card {
+    transition: all 0.3s ease;
+}
+
+/* 3. Focus States (Accessibility) */
+a:focus, 
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Remove default outline and use custom */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* 4. Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 5. Selection Color */
+::selection {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* 6. Prevent Horizontal Scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* 7. Consistent Spacing Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
