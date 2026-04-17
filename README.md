@@ -1,52 +1,45 @@
-# IYF Week 2 - CSS Mastery
+# Week 02: CSS Mastery - Portfolio Styling
 
-**Repository:** iyf-s10-week-02-s7085751-afk
-**Student:** Salma Sharleen
-**Week:** 2 - CSS Mastery
+## Author
+- **Name:** Sharleen Salma
+- **GitHub:** @s7085751-afk
+- **Date:** April 17, 2026 
 
-## 🎯 Project Overview
+## Project Description
+This week, I transformed my static HTML portfolio into a fully styled, professional, and responsive website. The goal was to master CSS fundamentals, including the Box Model, Typography, and modern layout techniques like Flexbox and CSS Grid to ensure the site looks great on all devices.
 
-A fully responsive portfolio website built with modern CSS techniques including Flexbox, CSS Grid, and mobile-first responsive design.
-
-## ✅ Completed Tasks
-
-### Core Tasks
-- [x] Task 3.1: CSS Setup & Basic Styling
-- [x] Task 3.2: Box Model Mastery
-- [x] Task 3.3: Typography System
-- [x] Task 3.4: Color Scheme
-- [x] Task 4.1: Flexbox Layout
-- [x] Task 4.2: CSS Grid Layout
-- [x] Task 4.3: Mobile-First Responsive Design
-- [x] Task 4.4: Polish & Refinement
-
-### Daily Challenges
-- [x] Day 1: Button Styles
-- [x] Day 2: Card Component
-- [x] Day 3: Hero Section
-- [x] Day 4: Form Styling
-- [x] Day 5: Footer Design
-
-## 🚀 Features
-
-- **Fully Responsive** - Optimized for mobile, tablet, and desktop
-- **Modern Layouts** - CSS Grid and Flexbox throughout
-- **Custom Design System** - Color scheme and typography
-- **Interactive Elements** - Hover effects and smooth transitions
-- **Accessibility** - Focus states and semantic HTML
-- **Mobile-First** - Progressive enhancement approach
-
-## 🛠️ Technologies Used
-
+## Technologies Used
 - HTML5
-- CSS3 (Grid, Flexbox, Custom Properties)
-- Responsive Design
-- Mobile-First Approach
+- CSS3 (Custom Properties/Variables)
+- Flexbox & CSS Grid
+- Google Fonts (Typography)
+- Mobile-First Responsive Design
 
-## 📁 Project Structure
-iyf-s10-week-02/
-├── index.html
-├── about.html
-├── projects.html
-├── contact.html
-└── README.md
+## Features
+- **Responsive Navigation:** A mobile-friendly navbar that switches from a vertical menu to a horizontal layout on larger screens.
+- **Project Grid:** A dynamic grid layout for displaying projects that adjusts columns based on screen size (1 col for mobile, 2 for tablet, 3 for desktop).
+- **Custom Color System:** Implemented a consistent brand palette using CSS variables for primary, secondary, and background colors.
+- **Interactive Elements:** Smooth transitions and hover states for buttons, links, and project cards to improve user experience.
+- **Typography System:** A scalable font system ranging from `xs` to `4xl` for consistent hierarchy.
+
+## How to Run
+1. Clone this repository to your local machine:
+   ```bash
+   git clone [https://github.com/s7085751-afk/iyf-s10-week-02-s7085751-afk.git](https://github.com/s7085751-afk/iyf-s10-week-02-s7085751-afk.git)
+ 2.Navigate to the project folder.
+ 3.Open index.html in your preferred web browser to view the portfolio.
+
+## Lessons Learned
+**Mobile-First Approach:** I learned that it is much easier to design for the smallest screen first and then add complexity for larger screens using media queries.
+
+**The Power of CSS Variables:** Using :root variables made it incredibly easy to update the entire color scheme and font scale from one central location.
+
+**Flexbox vs. Grid:** I gained a better understanding of when to use Flexbox (for one-dimensional layouts like navbars) vs. CSS Grid (for two-dimensional layouts like project galleries).
+
+## Challenges Faced
+**Center-aligning Hero Content:** I initially struggled with perfectly centering text over a full-viewport background image. I solved this by using Flexbox with justify-content: center and align-items: center on the parent container.
+
+**Grid Responsiveness:** Managing different column counts for different devices was tricky. I overcame this by practicing with @media breakpoints and utilizing the grid-template-columns: repeat(auto-fit, minmax(...)) property.  
+
+## Live Demo
+https://github.com/s7085751-afk/iyf-s10-week-02-s7085751-afk?authuser=0
