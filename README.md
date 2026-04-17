@@ -27,6 +27,7 @@ This week, I transformed my static HTML portfolio into a fully styled, professio
    ```bash
    git clone [https://github.com/s7085751-afk/iyf-s10-week-02-s7085751-afk.git](https://github.com/s7085751-afk/iyf-s10-week-02-s7085751-afk.git)
  2.Navigate to the project folder.
+ 
   3.Open index.html in your preferred web browser to view the portfolio.
 
 ## Lessons Learned
